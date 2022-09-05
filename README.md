@@ -35,3 +35,10 @@ cd ..
 react-native run-android
 
 - https://iot624.tistory.com/175
+
+folder 이름 변경 시
+
+- iso: 해당 appname을 폴더명과 동일하게 변경한다.
+- android: 안드로이드 오류를 찾는데 걸렸다.
+  - app.json과 ./android/app/src/main/java/com/{appName}/MainActivity.java을 동일하게 변경해야 하고, MainActivity.java안에 있는 return "$"도 동일하게 변경해야 한다.
+  - https://github.com/react-native-community/upgrade-support/issues/96
