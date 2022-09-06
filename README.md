@@ -17,9 +17,16 @@ android setting이 안될 경우가 많다.
 현재 에러가 아래와 같다면
 
 - error Failed to install the app. Make sure you have the Android development environment set up:
-- chmod 755 android/gradlew를 작성한다
-- 접근 권한의 문제이다
-- - https://right-hot.tistory.com/entry/React-Native-Error-spawn-gradlew-EACCES
+  -- chmod 755 android/gradlew를 작성한다
+  -- 접근 권한의 문제이다
+  -- https://right-hot.tistory.com/entry/React-Native-Error-spawn-gradlew-EACCES
+
+- Could not find "Podfile.lock"
+  -- 프로젝트의 ios 폴더로 이동후
+  -- $ cd ios
+  -- $ pod repo update
+  -- $ pod install
+  -- 다시 react-native run-ios실행하면 정상적으로 에뮬레이터가 나온다.
 
 환경변수
 
@@ -39,6 +46,6 @@ react-native run-android
 folder 이름 변경 시
 
 - iso: 해당 appname을 폴더명과 동일하게 변경한다.
-- android: 안드로이드 오류를 찾는데 걸렸다.
+- android
   - app.json과 ./android/app/src/main/java/com/{appName}/MainActivity.java을 동일하게 변경해야 하고, MainActivity.java안에 있는 return "$"도 동일하게 변경해야 한다.
   - https://github.com/react-native-community/upgrade-support/issues/96
