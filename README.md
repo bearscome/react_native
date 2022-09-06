@@ -49,3 +49,8 @@ folder 이름 변경 시
 - android
   - app.json과 ./android/app/src/main/java/com/{appName}/MainActivity.java을 동일하게 변경해야 하고, MainActivity.java안에 있는 return "$"도 동일하게 변경해야 한다.
   - https://github.com/react-native-community/upgrade-support/issues/96
+
+버전
+
+- 현재 최신 버전은 cli.init 버그가 있어 사용할 수 없다. 버전명을 낮춰야 한다.
+  -- npx react-native init navigator --version 0.68.2
